@@ -23,11 +23,16 @@ open_graph:
 navbar:
     # Navigation bar menu links
     menu:
-        Home: /
-        Archives: /archives/
-        Categories: /categories/
-        Tags: /tags/
-        About: /about/
+        # Home: /
+        # Archives: /archives/
+        # Categories: /categories/
+        # Tags: /tags/
+        # About: /about/
+        主页: /
+        归档: /archives/
+        分类: /categories/
+        标签: /tags/
+        关于: /about/
     # Navigation bar links to be shown on the right
     links:
         Charbo23 GitHub:
@@ -109,7 +114,7 @@ sidebar:
     right:
         # Whether the right sidebar is sticky when page scrolls
         # http://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/make-a-sidebar-sticky-when-page-scrolls/
-        sticky: false
+        sticky: true
 # Sidebar widget settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
@@ -119,36 +124,36 @@ widgets:
         # Where should the widget be placed, left or right
         position: left
         # Author name to be shown in the profile widget
-        author: Xinyu Liu
+        author: Charbo
         # Title of the author to be shown in the profile widget
-        author_title: Alpha Lxy
+        author_title: Destiny always finds a way
         # Author's current location to be shown in the profile widget
-        location: Beijing, China
+        location: Ningbo, China
         # Path or URL to the avatar to be shown in the profile widget
         avatar: 
         # Email address for the Gravatar to be shown in the profile widget
-        gravatar: liuxinyu0922@hotmail.com 
+        gravatar: charbo233@qq.com 
         # Whether to show avatar image rounded or square
         avatar_rounded: false
         # Path or URL for the follow button
         follow_link: 'https://www.github.com/Charbo23'
         # Links to be shown on the bottom of the profile widget
         social_links:
-            #Github:
-            #    icon: fab fa-github
-            #    url: 'https://www.github.com/Charbo23'
-            #Facebook:
-            #    icon: fab fa-facebook
-            #    url: 'http://facebook.com'
-            #Twitter:
-            #    icon: fab fa-twitter
-            #    url: 'http://twitter.com'
-            #Dribbble:
-            #    icon: fab fa-dribbble
-            #    url: 'http://dribbble.com'
-            #RSS:
-            #    icon: fas fa-rss
-            #    url: /
+            Github:
+               icon: fab fa-github
+               url: 'https://www.github.com/Charbo23'
+            Facebook:
+               icon: fab fa-facebook
+               url: 'http://facebook.com'
+            Twitter:
+               icon: fab fa-twitter
+               url: 'http://twitter.com'
+            Dribbble:
+               icon: fab fa-dribbble
+               url: 'http://dribbble.com'
+            RSS:
+               icon: fas fa-rss
+               url: /
     -
         # Widget name
         type: toc
