@@ -30,9 +30,9 @@ navbar:
         About: /about/
     # Navigation bar links to be shown on the right
     links:
-        AlphaLxy GitHub:
+        Charbo23 GitHub:
             icon: fab fa-github
-            url: 'https://www.github.com/AlphaLxy'
+            url: 'https://www.github.com/Charbo23'
 # Footer section link settings
 footer:
     # Links to be shown on the right of the footer section
@@ -44,9 +44,9 @@ footer:
               - fab fa-creative-commons-nc
               - fab fa-creative-commons-sa
             url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
-        AlphaLxy GitHub:
+        Charbo23 GitHub:
             icon: fab fa-github
-            url: 'https://www.github.com/AlphaLxy'
+            url: 'https://www.github.com/Charbo23'
 # Article display settings
 article:
     # Code highlight theme
@@ -131,12 +131,12 @@ widgets:
         # Whether to show avatar image rounded or square
         avatar_rounded: false
         # Path or URL for the follow button
-        follow_link: 'https://www.github.com/AlphaLxy'
+        follow_link: 'https://www.github.com/Charbo23'
         # Links to be shown on the bottom of the profile widget
         social_links:
             #Github:
             #    icon: fab fa-github
-            #    url: 'https://www.github.com/AlphaLxy'
+            #    url: 'https://www.github.com/Charbo23'
             #Facebook:
             #    icon: fab fa-facebook
             #    url: 'http://facebook.com'
