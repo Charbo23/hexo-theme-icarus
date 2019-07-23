@@ -200,7 +200,7 @@
     });
 
     var touch = false;
-    $(document).on('click focus', '.navbar-main .search', function () {
+    $(document).on('click', '.navbar-main .search', function () {
         $main.addClass('show');
         $main.find('.ins-search-input').focus();
     }).on('click touchend', '.ins-search-item', function (e) {

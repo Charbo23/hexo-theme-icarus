@@ -83,7 +83,7 @@ img.thumbnail
 .navbar-logo,
 .footer-logo
     img
-        max-height: 2.5rem
+        max-height: 1.75rem
 
 .navbar-main
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05)
@@ -107,12 +107,12 @@ img.thumbnail
     .navbar-item
         display: flex
         align-items: center
-        padding: 1.25rem 0.75rem
-        &.navbar-logo
-            padding: 0
+        padding: 1.25rem 0.75rem   
         &.is-active
             color: hsl(217, 71%, 53%)
             background-color: transparent
+    .navbar-logo
+        padding: 1.3rem 0.75rem 1.2rem
     @media screen and (max-width: screen-desktop - 1)
         .navbar-menu
             justify-content: center
@@ -260,7 +260,13 @@ img.thumbnail
     #toc-mask
         &.is-active
             display: block
-
+    .navbar-main 
+        .navbar-item
+            padding-top: 1rem; 
+        .navbar-logo
+            padding-bottom: 0;
+            padding-top: 1.25rem;
+        
 
 /* ---------------------------------
  *         Custom modifiers
