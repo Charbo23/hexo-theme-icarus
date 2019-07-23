@@ -50,7 +50,7 @@ body, button, input, select, textarea
             align-self: flex-start
             position: -webkit-sticky
             position: sticky
-            top: .75rem
+            top: 5.2rem
     .column-right-shadow
         &.is-sticky
             top: 1.5rem
@@ -113,6 +113,9 @@ img.thumbnail
             background-color: transparent
     .navbar-logo
         padding: 1.3rem 0.75rem 1.2rem
+    &.is-sticky
+        position: sticky
+        top: 0
     @media screen and (max-width: screen-desktop - 1)
         .navbar-menu
             justify-content: center
@@ -266,6 +269,9 @@ img.thumbnail
         .navbar-logo
             padding-bottom: 0;
             padding-top: 1.25rem;
+        // &.is-sticky
+        //     .navbar-brand
+        //         display: none
         
 
 /* ---------------------------------

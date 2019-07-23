@@ -194,6 +194,7 @@ widgets:
     #    position: right
 # Other plugin settings
 plugins:
+    waypoints: true
     # Enable page animations
     animejs: true
     # Enable the lightGallery and Justified Gallery plugins
@@ -211,7 +212,7 @@ plugins:
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Google-Analytics
     google-analytics:
         # Google Analytics tracking id
-        tracking_id: 
+        tracking_id: UA-144334189-1
     # Baidu Analytics plugin settings
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Baidu-Analytics
     baidu-analytics:
