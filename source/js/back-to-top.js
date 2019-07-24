@@ -139,10 +139,10 @@ $(document).ready(function () {
             // mobile and tablet mode
             if (!isScrollUp()) {
                 applyState(state['mobile-hidden']);
-                document.getElementById('navbar-main').classList.remove("is-sticky");
+                // document.getElementById('navbar-main').classList.remove("is-sticky");
             } else {
                 applyState(state['mobile-visible']);
-                document.getElementById('navbar-main').classList.add("is-sticky");
+                // document.getElementById('navbar-main').classList.add("is-sticky");
             }
             updateScrollTop();
         }

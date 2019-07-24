@@ -16,7 +16,7 @@ body
     background-color: #f7f7f7
 
 body, button, input, select, textarea
-    font-family: family-sans
+    font-family: family-sans //偶发性字体发虚，暂时注释，位置需微调
 
 @media screen and (min-width: screen-widescreen)
     .is-1-column .container
@@ -50,7 +50,7 @@ body, button, input, select, textarea
             align-self: flex-start
             position: -webkit-sticky
             position: sticky
-            top: 5.2rem
+            top: 1.75rem
     .column-right-shadow
         &.is-sticky
             top: 1.5rem
@@ -491,11 +491,11 @@ figure.highlight
     padding: 1rem 1rem
     border-left: 3px solid #FF1700
     background-color: #F9F9F9
-
-.article {counter-reset:section}
-.article h2{counter-reset:sub-section}
-.article h3{counter-reset:composite}
-.article h4{counter-reset:detail}
-.article h2:before{content:counter(section) " ";counter-increment:section}
-.article h3:before{content:counter(section) "." counter(sub-section) " ";counter-increment:sub-section}
-.article h4:before{content:counter(section) "." counter(sub-section) "." counter(composite) " ";counter-increment:composite}
+// 正文标题自动计数
+// .article {counter-reset:section}
+// .article h2{counter-reset:sub-section}
+// .article h3{counter-reset:composite}
+// .article h4{counter-reset:detail}
+// .article h2:before{content:counter(section) " ";counter-increment:section}
+// .article h3:before{content:counter(section) "." counter(sub-section) " ";counter-increment:sub-section}
+// .article h4:before{content:counter(section) "." counter(sub-section) "." counter(composite) " ";counter-increment:composite}

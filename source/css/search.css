@@ -56,7 +56,8 @@
     margin-top: -11px;
     position: absolute;
     text-align: center;
-    display: inline-block;
+    display: inline-block;   
+    cursor: pointer;
 }
 
 .searchbox .searchbox-input-wrapper .searchbox-close:hover {
