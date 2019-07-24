@@ -72,7 +72,7 @@ comment:
     type: valine
     app_id: 4hB0QbpFRpN2Ys1YvUM4DyeG-MdYXbMMI        # (required) LeanCloud application id
     app_key: CerHy252ODKOIlKlnYomzvn7       # (required) LeanCloud application key
-    notify: true           # (optional) receive email notification
+    notify: false           # (optional) receive email notification
     verify: false           # (optional) show verification code
     placeholder: Feel free to talk   # (optional) comment box placeholder text
 # Donation entries
@@ -197,7 +197,7 @@ widgets:
     #    position: right
 # Other plugin settings
 plugins:
-    waypoints: true
+    waypoints: false
     # Enable page animations
     animejs: true
     # Enable the lightGallery and Justified Gallery plugins
