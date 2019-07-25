@@ -54,6 +54,12 @@ body, button, input, select, textarea
     .column-right-shadow
         &.is-sticky
             top: 1.5rem
+@media screen and (min-width: screen-desktop)
+    .ins-section .ins-section-header,
+    .ins-section .ins-search-item,
+    .ins-section .ins-slug,        
+    .ins-section .ins-search-item .ins-search-preview
+        transition: all 0.2s ease-in-out
 
 .tag
     &.is-grey
@@ -206,7 +212,8 @@ img.thumbnail
             max-width: 50%
             font-size: 1.15rem
             position: relative
-
+    &.layout-page
+         padding: 1.5rem
 .rtl
      direction: rtl
      .level

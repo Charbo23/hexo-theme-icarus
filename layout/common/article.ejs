@@ -6,7 +6,7 @@
         <%- index ? '</a>' : '</span>' %>
     </div>
     <% } %>
-    <div class="card-content article <%= post.hasOwnProperty('direction') ? post.direction : '' %>">
+    <div class="card-content article <% if (post.layout == 'page') { %>layout-page<% } %><%= post.hasOwnProperty('direction') ? post.direction : '' %>">
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             <% if (index) { %>
                 <a class="has-link-black-ter" href="<%- url_for(post.link ? post.link : post.path) %>"><%= post.title %></a>
