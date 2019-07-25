@@ -61,6 +61,16 @@ body, button, input, select, textarea
     .ins-section .ins-slug,        
     .ins-section .ins-search-item .ins-search-preview
         transition: all 0.2s ease-in-out
+    .ins-section .ins-search-item:hover, 
+    .ins-section .ins-search-item.active
+        color: #fff
+        background: #3273dc
+        cursor: pointer
+    .ins-section .ins-search-item:hover .ins-slug, .ins-section .ins-search-item.active .ins-slug, 
+    .ins-section .ins-search-item:hover .ins-search-preview, 
+    .ins-section .ins-search-item.active .ins-search-preview
+        color: #fff
+
 
 .tag
     &.is-grey
