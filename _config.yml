@@ -197,7 +197,7 @@ widgets:
     #    position: right
 # Other plugin settings
 plugins:
-    waypoints: false
+    waypoints: true
     # Enable page animations
     animejs: true
     # Enable the lightGallery and Justified Gallery plugins

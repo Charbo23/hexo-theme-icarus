@@ -3,11 +3,11 @@
         return Array.prototype.slice.call(document.querySelectorAll.apply(document, arguments));
     }
 
-    $('body > .navbar, body > .section, body > .footer').forEach(function (element) {
+    $(' body > .section, body > .footer').forEach(function (element) {
         element.style.transition = '0s';
         element.style.opacity = '0';
     });
-    document.querySelector('body > .navbar').style.transform = 'translateY(-100px)';
+    // document.querySelector('body > .navbar').style.transform = 'translateY(-100px)';
     ['.column-main > .card',
      '.column-left > .card, .column-right-shadow > .card',
      '.column-right > .card'].map(function (selector) {
@@ -19,11 +19,11 @@
         });
     });
     setTimeout(function () {
-        $('body > .navbar, body > .section, body > .footer').forEach(function (element) {
+        $(' body > .section, body > .footer').forEach(function (element) {
             element.style.opacity = '1';
             element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
         });
-        document.querySelector('body > .navbar').style.transform = 'translateY(0)';
+        // document.querySelector('body > .navbar').style.transform = 'translateY(0)';
         ['.column-main > .card',
          '.column-left > .card, .column-right-shadow > .card',
          '.column-right > .card'].map(function (selector) {

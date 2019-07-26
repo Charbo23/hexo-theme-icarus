@@ -6,12 +6,42 @@ window.onload=function(){
     element: document.getElementById('container'),
     handler: function(direction) {
       if(direction==="down"){
-        document.getElementById('navbar-main').classList.add("is-sticky");
+        document.getElementById('navbar-main').classList.remove("visible");
+        var before = $(window).scrollTop();
+        var cntUp = 0;
+        var cntDown = 0
+            $(window).on("scroll",function(){
+              var after = $(window).scrollTop();
+              if (before<after) {
+                if(cntDown<10){
+                  cntDown++;
+                  cntUp=0;
+                }else{
+                  cntDown=0;
+                  cntUp=0;
+                  document.getElementById('navbar-main').classList.remove("visible");
+                  // console.log('下');
+                }
+              }else if (before>after) {
+                if(cntUp<10){
+                  cntUp++;
+                  cntDown=0;
+                }else{
+                  cntDown=0;
+                  cntUp=0;
+                  document.getElementById('navbar-main').classList.add("visible");
+                  // console.log('上');
+                }
+              }
+              before = after;
+          });
       }
       else if(direction==="up"){
-        document.getElementById('navbar-main').classList.remove("is-sticky");
+        document.getElementById('navbar-main').classList.add("visible");
+          $(window).off("scroll");
       }
-    }
+    },
+    offset: -20 
   })
 }
 </script>

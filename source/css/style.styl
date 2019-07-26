@@ -17,7 +17,8 @@ body
 
 body, button, input, select, textarea
     font-family: family-sans //偶发性字体发虚，暂时注释，位置需微调
-
+.section.after-header
+    padding-top: 7rem
 @media screen and (min-width: screen-widescreen)
     .is-1-column .container
     .is-2-column .container
@@ -104,6 +105,12 @@ img.thumbnail
 
 .navbar-main
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05)
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all .2s;
+    transform: translate3d(0,-100%,0);
     .navbar-menu,
     .navbar-start,
     .navbar-end
@@ -130,9 +137,8 @@ img.thumbnail
             background-color: transparent
     .navbar-logo
         padding: 1.3rem 0.75rem 1.2rem
-    &.is-sticky
-        position: sticky
-        top: 0
+    &.visible
+        transform: translateZ(0);
     @media screen and (max-width: screen-desktop - 1)
         .navbar-menu
             justify-content: center
