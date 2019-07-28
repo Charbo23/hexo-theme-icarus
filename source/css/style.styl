@@ -20,6 +20,9 @@ body, button, input, select, textarea
 .section
     &.after-header
         padding-top: 7rem
+.image
+    &.is-rounded
+        border-radius: 290486px
 @media screen and (min-width: screen-widescreen)
     .is-1-column .container
     .is-2-column .container
@@ -47,16 +50,15 @@ body, button, input, select, textarea
 @media screen and (min-width: screen-tablet)
     .column-main,
     .column-left,
-    .column-right,
-    .column-right-shadow
+    .column-right
         &.is-sticky
             align-self: flex-start
             position: -webkit-sticky
             position: sticky
-            top: 1.75rem
-    .column-right-shadow
-        &.is-sticky
-            top: 1.5rem
+            top: 4rem
+            &#toc
+                top: 5rem
+    
 @media screen and (min-width: screen-desktop)
     .ins-section .ins-section-header,
     .ins-section .ins-search-item,

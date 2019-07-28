@@ -137,7 +137,7 @@ widgets:
         # Email address for the Gravatar to be shown in the profile widget
         # gravatar: 
         # Whether to show avatar image rounded or square
-        avatar_rounded: false
+        avatar_rounded: true
         # Path or URL for the follow button
         follow_link: 'https://www.github.com/Charbo23'
         # Links to be shown on the bottom of the profile widget
@@ -154,9 +154,9 @@ widgets:
             Dribbble:
                icon: fab fa-dribbble
                url: 'https://dribbble.com'
-            RSS:
-               icon: fas fa-rss
-               url: /
+            # RSS:
+            #    icon: fas fa-rss
+            #    url: /
     -
         # Widget name
         type: toc
