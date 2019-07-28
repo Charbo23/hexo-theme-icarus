@@ -147,13 +147,13 @@ widgets:
                url: 'https://www.github.com/Charbo23'
             Facebook:
                icon: fab fa-facebook
-               url: 'http://facebook.com'
+               url: 'https://facebook.com'
             Twitter:
                icon: fab fa-twitter
-               url: 'http://twitter.com'
+               url: 'https://twitter.com'
             Dribbble:
                icon: fab fa-dribbble
-               url: 'http://dribbble.com'
+               url: 'https://dribbble.com'
             RSS:
                icon: fas fa-rss
                url: /
