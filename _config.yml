@@ -209,7 +209,7 @@ plugins:
     # Enable the MathJax plugin
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/mathjax-plugin/
     mathjax: true
-    # Show the back to top button on mobile devices
+    # Show the back to top button
     back-to-top: true
     # Google Analytics plugin settings
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Google-Analytics
