@@ -1,48 +1,39 @@
 <% if (head && plugin!==false) { %>
 <script async src="https://cdn.bootcss.com/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 <script>
+var before;
 window.onload=function(){
   var waypoint = new Waypoint({
     element: document.getElementById('container'),
     handler: function(direction) {
       if(direction==="down"){
-        document.getElementById('navbar-main').classList.remove("visible");
-        var before = $(window).scrollTop();
-        var cntUp = 0;
-        var cntDown = 0
-            $(window).on("scroll",function(){
-              var after = $(window).scrollTop();
-              if (before<after) {
-                if(cntDown<10){
-                  cntDown++;
-                  cntUp=0;
-                }else{
-                  cntDown=0;
-                  cntUp=0;
-                  document.getElementById('navbar-main').classList.remove("visible");
-                  // console.log('下');
-                }
-              }else if (before>after) {
-                if(cntUp<10){
-                  cntUp++;
-                  cntDown=0;
-                }else{
-                  cntDown=0;
-                  cntUp=0;
-                  document.getElementById('navbar-main').classList.add("visible");
-                  // console.log('上');
-                }
-              }
-              before = after;
-          });
+            before = $(window).scrollTop();
+            document.getElementById('navbar-main').classList.remove("visible","logo-visible");
+            $(window).on("scroll",navbarToggle);
       }
       else if(direction==="up"){
-        document.getElementById('navbar-main').classList.add("visible");
-          $(window).off("scroll");
+        document.getElementById('navbar-main').classList.add("visible","logo-visible");
+        before = $(window).scrollTop();
+        
+        $(window).off("scroll",navbarToggle);
       }
     },
     offset: -20 
-  })
+  });
+  function navbarToggle(){
+              var cur = $(window).scrollTop();
+              var diff = cur-before;
+              // console.log(diff);
+              if (diff>40) {
+                before = cur;
+                document.getElementById('navbar-main').classList.remove("visible");
+                // console.log('下');
+              }else if (diff<-70) {
+                before = cur;
+                document.getElementById('navbar-main').classList.add("visible");
+                // console.log('上');
+              }
+          }
 }
 </script>
 <% } %>

@@ -18,7 +18,7 @@ body
 body, button, input, select, textarea
     font-family: family-sans //偶发性字体发虚，暂时注释，位置需微调
 .section.after-header
-    padding-top: 7rem
+    padding-top: 8rem
 @media screen and (min-width: screen-widescreen)
     .is-1-column .container
     .is-2-column .container
@@ -288,14 +288,17 @@ img.thumbnail
         &.is-active
             display: block
     .navbar-main 
+        .navbar-brand
+            display: none
         .navbar-item
             padding-top: 1rem; 
         .navbar-logo
             padding-bottom: 0;
-            padding-top: 1.25rem;
-        // &.is-sticky
-        //     .navbar-brand
-        //         display: none
+            padding-top: 1.25rem;  
+        &.logo-visible
+            .navbar-brand
+                display: flex
+                position: relative
     .article
         padding: 1.5rem    
 
