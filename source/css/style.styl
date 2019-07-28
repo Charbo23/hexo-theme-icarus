@@ -17,8 +17,9 @@ body
 
 body, button, input, select, textarea
     font-family: family-sans //偶发性字体发虚，暂时注释，位置需微调
-.section.after-header
-    padding-top: 8rem
+.section
+    &.after-header
+        padding-top: 7rem
 @media screen and (min-width: screen-widescreen)
     .is-1-column .container
     .is-2-column .container
@@ -41,8 +42,8 @@ body, button, input, select, textarea
 @media screen and (max-width: screen-tablet - 1)
     .section
         padding: 1.5rem 1rem
-    
 
+    
 @media screen and (min-width: screen-tablet)
     .column-main,
     .column-left,
@@ -147,7 +148,22 @@ img.thumbnail
             margin-right: 0
         .navbar-end
             margin-left: 0
-
+@media screen and (max-width: screen-desktop - 1)  
+    .navbar-main 
+        .navbar-brand
+            display: none
+        .navbar-item
+            padding-top: 1rem; 
+        .navbar-logo
+            padding-bottom: 0;
+            padding-top: 1.25rem;  
+        &.logo-visible
+            .navbar-brand
+                display: flex
+                position: relative   
+    .section
+        &.after-header
+            padding-top: 8rem
 .footer
     background: white
     padding: 1.5rem
@@ -264,6 +280,7 @@ img.thumbnail
             right: -0.75rem
 
 @media screen and (max-width: screen-tablet - 1)
+
     #toc
         display: none
         position: fixed
@@ -287,18 +304,6 @@ img.thumbnail
     #toc-mask
         &.is-active
             display: block
-    .navbar-main 
-        .navbar-brand
-            display: none
-        .navbar-item
-            padding-top: 1rem; 
-        .navbar-logo
-            padding-bottom: 0;
-            padding-top: 1.25rem;  
-        &.logo-visible
-            .navbar-brand
-                display: flex
-                position: relative
     .article
         padding: 1.5rem    
 
