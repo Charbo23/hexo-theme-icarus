@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var $button = $('#back-to-top');
     var $footer = $('footer.footer');
     var $mainColumn = $('.column-main');
@@ -88,7 +88,7 @@ $(document).ready(function () {
         if (!hasRightSidebar()) {
             return 0;
         }
-        return Math.max.apply(null, $rightSidebar.find('.widget').map(function () {
+        return Math.max.apply(null, $rightSidebar.find('.widget').map(function() {
             return $(this).offset().top + $(this).outerHeight(true);
         }));
     }
@@ -147,10 +147,24 @@ $(document).ready(function () {
     }
 
     update();
-    $(window).resize(update);
+    $(window).resize(debounce(update));
     $(window).scroll(update);
 
-    $('#back-to-top').on('click', function () {
+    $('#back-to-top').on('click', function() {
         $('body, html').animate({ scrollTop: 0 }, 400);
     });
 });
+
+function debounce(fn,wait) {
+    var wait = wait ? wait : 300;
+    var timer = null;
+    return function(...args) {
+        var context = this;
+        if(timer){
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function(){
+            fn.apply(context, args);
+        }, wait);
+    };
+}

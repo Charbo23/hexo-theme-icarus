@@ -3,37 +3,55 @@
 <script>
 var before;
 window.onload=function(){
+  var action = throttle(navbarToggle);
   var waypoint = new Waypoint({
     element: document.getElementById('container'),
     handler: function(direction) {
       if(direction==="down"){
             before = $(window).scrollTop();
             document.getElementById('navbar-main').classList.remove("visible","logo-visible");
-            $(window).on("scroll",navbarToggle);
+            $(window).on("scroll",action);
       }
       else if(direction==="up"){
         document.getElementById('navbar-main').classList.add("visible","logo-visible");
         before = $(window).scrollTop();
-        
-        $(window).off("scroll",navbarToggle);
+        //只解除绑定navbar的滚动监听
+        $(window).off("scroll",action);
       }
     },
     offset: -20 
   });
-  function navbarToggle(){
-              var cur = $(window).scrollTop();
-              var diff = cur-before;
-              // console.log(diff);
-              if (diff>40) {
-                before = cur;
-                document.getElementById('navbar-main').classList.remove("visible");
-                // console.log('下');
-              }else if (diff<-70) {
-                before = cur;
-                document.getElementById('navbar-main').classList.add("visible");
-                // console.log('上');
-              }
-          }
+
+
 }
+function navbarToggle(e){
+  var cur = $(window).scrollTop();
+  var diff = cur-before;
+  //console.log(diff);
+  if (diff>40) {
+    before = cur;
+    document.getElementById('navbar-main').classList.remove("visible");
+    // console.log('下');
+  }else if (diff<-70) {
+    before = cur;
+    document.getElementById('navbar-main').classList.add("visible");
+    // console.log('上');
+  }
+}
+function throttle(fn,wait) {
+  var wait = wait?wait:300;
+  var timer = null;
+  //以下函数当scroll事件触发时执行
+  return function (...args) {
+    var context = this;
+    if (!timer){
+      timer = setTimeout(function(){
+          fn.apply(context, args);    
+          timer = null;
+      }, wait);
+    } 
+  }
+}
+
 </script>
 <% } %>
