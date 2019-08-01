@@ -156,7 +156,7 @@ widgets:
             #    url: 'https://dribbble.com'
             RSS:
                icon: fas fa-rss
-               url: 'https://charbo.me/rss.xml'
+               url: '/rss.xml'
     -
         # Widget name
         type: toc
