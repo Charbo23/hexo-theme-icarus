@@ -3,7 +3,7 @@ version: 2.3.0
 # Path or URL to the website's icon
 favicon: /images/echo.png
 # Path or URL to RSS atom.xml
-rss: 
+rss: /rss.xml
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
 logo: /images/logo.svg
 # Open Graph metadata
@@ -147,16 +147,16 @@ widgets:
                url: 'https://www.github.com/Charbo23'
             Facebook:
                icon: fab fa-facebook
-               url: 'https://facebook.com'
+               url: 'https://www.facebook.com/Charbo233'
             Twitter:
                icon: fab fa-twitter
-               url: 'https://twitter.com'
+               url: 'https://twitter.com/Charbo233'
             # Dribbble:
             #    icon: fab fa-dribbble
             #    url: 'https://dribbble.com'
-            # RSS:
-            #    icon: fas fa-rss
-            #    url: /
+            RSS:
+               icon: fas fa-rss
+               url: 'https://charbo.me/rss.xml'
     -
         # Widget name
         type: toc
