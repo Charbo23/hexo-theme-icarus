@@ -5,35 +5,10 @@
 <% } else { %>
 <div id="valine-thread" class="content"></div>
 <%- _js(cdn('leancloud-storage', '3.14.1', 'dist/av-min.js')) %>
-<%- _js('js/Valine.min',true) %>
+<%- _js('js/Valine',true) %>
 
 <script>
-    var i18n =  {
-        nick: '昵称（必填）',
-        mail: '邮箱（必填，用于接收回复）',
-        link: '您的个人网站 (选填)',
-        no_comment_yet: '快来做第一个评论的人吧~',
-        submit: '提交',
-        reply: '回复',
-        cancel_reply: '取消回复',
-        comment_count: '已有{}条评论',
-        cancel: '取消',
-        confirm: '确认',
-        continue: '继续',
-        more: '加载更多...',
-        preview: '预览',
-        emoji: '表情',
-        error99: '初始化失败，请检查init中的`el`元素.',
-        error100: '初始化失败，请检查你的AppId和AppKey.',
-        error401: '未经授权的操作，请检查你的AppId和AppKey.',
-        error403: '访问被api域名白名单拒绝，请检查你的安全域名设置.',
-        seconds: '秒前',
-        minutes: '分钟前',
-        hours: '小时前',
-        days: '天前',
-        now: '刚刚',
-        input_tips: '您输入的网址或邮箱格式不正确，请修正后提交！'
-    };
+    
     var emoticon_list=["吐.png", "喷血.png", "狂汗.png", "不说话.png", "汗.png", "坐等.png", "献花.png", "不高兴.png", "中刀.png", "害羞.png", "皱眉.png", "小眼睛.png", "中指.png", "尴尬.png", "瞅你.png", "想一想.png", "中枪.png", "得意.png", "肿包.png", "扇耳光.png", "亲亲.png", "惊喜.png", "脸红.png", "无所谓.png", "便便.png", "愤怒.png", "蜡烛.png", "献黄瓜.png", "内伤.png", "投降.png", "观察.png", "看不见.png", "击掌.png", "抠鼻.png", "邪恶.png", "看热闹.png", "口水.png", "抽烟.png", "锁眉.png", "装大款.png", "吐舌.png", "无奈.png", "长草.png", "赞一个.png", "呲牙.png", "无语.png", "阴暗.png", "不出所料.png", "咽气.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png", "黑线.png", "喜极而泣.png", "喷水.png", "深思.png", "鼓掌.png", "暗地观察.png"];
     $(function() { 
         new Valine({
@@ -45,7 +20,6 @@
             app_key: '<%= get_config('comment.app_key') %>',
             placeholder: '<%= get_config('comment.placeholder') %>',
             lang: "zh-cn",
-            i18n: i18n,
             maxNest: 3,
             pageSize: 5,
             // emoticon_url: 'https://charbo.me/alu',
