@@ -4,3 +4,5 @@ $('#toc').on("click", ".toc-item", function() {
     window.location.hash = target;
     //todo:返回事件无法回到原位置
 });
+var Scrollbar = window.Scrollbar;
+Scrollbar.init(document.querySelector("#toc"));
