@@ -39,7 +39,7 @@ function navbarToggle(e){
   }
 }
 function throttle(fn,wait) {
-  var wait = wait?wait:300;
+  wait = wait === undefined ? 300 : wait;
   var timer = null;
   //以下函数当scroll事件触发时执行
   return function (...args) {

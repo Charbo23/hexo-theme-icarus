@@ -156,7 +156,7 @@ $(document).ready(function() {
 });
 
 function debounce(fn,wait) {
-    var wait = wait ? wait : 300;
+    wait = wait === undefined ? 300 : wait;
     var timer = null;
     return function(...args) {
         var context = this;
