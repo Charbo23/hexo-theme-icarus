@@ -203,6 +203,10 @@
     $(document).on('click', '.navbar-main .search', function () {
         $main.addClass('show');
         $main.find('.ins-search-input').focus();
+    }).on('click', '.searchbox.ins-search', function () {
+        this.classList.remove("show");
+    }).on('click', '.searchbox .searchbox-container', function (e) {
+        e.stopPropagation();
     }).on('click touchend', '.ins-search-item', function (e) {
         if (e.type !== 'click' && !touch) {
             return;
