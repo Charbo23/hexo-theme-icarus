@@ -9,20 +9,38 @@ window.onload=function(){
     handler: function(direction) {
       if(direction==="down"){
             before = $(window).scrollTop();
-            document.getElementById('navbar-main').classList.remove("visible","logo-visible");
+            document.getElementById('navbar-main').classList.remove("visible");
             $(window).on("scroll",action);
       }
       else if(direction==="up"){
-        document.getElementById('navbar-main').classList.add("visible","logo-visible");
+        document.getElementById('navbar-main').classList.add("visible");
         before = $(window).scrollTop();
         //只解除绑定navbar的滚动监听
         $(window).off("scroll",action);
       }
     },
-    offset: -20 
+    offset: -100 
   });
-
-
+  var waypoint2 = new Waypoint({
+    element: document.getElementById('container'),
+    handler: function(direction) {
+      if(direction==="down"){
+        document.getElementById('navbar-main').classList.remove("mobile-logo-visible");
+        document.getElementById('navbar-main').classList.add("mobile-fix-bar");
+      }
+    },
+    offset: 50 
+  });
+  var waypoint3 = new Waypoint({
+    element: document.getElementById('container'),
+    handler: function(direction) {
+      if(direction==="up"){
+        document.getElementById('navbar-main').classList.add("mobile-logo-visible");
+        document.getElementById('navbar-main').classList.remove("mobile-fix-bar");    
+      }
+    },
+    offset: 50 
+  });
 }
 function navbarToggle(e){
   var cur = $(window).scrollTop();
