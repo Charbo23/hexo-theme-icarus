@@ -217,7 +217,7 @@
         if (e.type !== 'click' && !touch) {
             return;
         }
-        //关闭软键盘
+        //close keyboard
         document.activeElement.blur();
         $('.navbar-main').css('pointer-events', 'none');
         setTimeout(function(){
