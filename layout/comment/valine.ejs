@@ -27,16 +27,17 @@
             emoticon_list: emoticon_list,
         });
     });
-    //todo: 过滤非数字字段，只允许跳转到评论
-    if(window.location.hash){
-        var target =decodeURIComponent(window.location.hash);
-        var checkExist = setInterval(function() {
-        if ($(target).length) {
-            $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
-            clearInterval(checkExist);
-        }
-        }, 100);
-    }  
+    //跳转到评论
+    // var urlHash = window.location.hash;
+    // if(urlHash){
+    //     var target =decodeURIComponent(window.location.hash);
+    //     var checkExist = setInterval(function() {
+    //     if ($(target).length) {
+    //         $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
+    //         clearInterval(checkExist);
+    //     }
+    //     }, 100);
+    // }  
  
 </script>
 <% } %>

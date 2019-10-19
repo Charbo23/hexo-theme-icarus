@@ -27,19 +27,12 @@ window.onload=function(){
       if(direction==="down"){
         document.getElementById('navbar-main').classList.remove("mobile-logo-visible");
         document.getElementById('navbar-main').classList.add("mobile-fix-bar");
-      }
-    },
-    offset: 50 
-  });
-  var waypoint3 = new Waypoint({
-    element: document.getElementById('container'),
-    handler: function(direction) {
-      if(direction==="up"){
+      }else if(direction==="up"){
         document.getElementById('navbar-main').classList.add("mobile-logo-visible");
         document.getElementById('navbar-main').classList.remove("mobile-fix-bar");    
       }
     },
-    offset: 50 
+    offset: 55 
   });
 }
 function navbarToggle(e){

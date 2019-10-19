@@ -18,9 +18,6 @@
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="<%= date_xml(post.date) %>"><i class="far fa-calendar-alt">&nbsp;</i><%= date(post.date) %></time>
-                <% if (post.updated && post.updated > post.date) { %>
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="<%= date_xml(post.updated) %>"><i class="far fa-calendar-check">&nbsp;</i><%= date(post.updated) %></time>
-                <% } %>
                 <% if (post.categories && post.categories.length) { %>
                 <div class="level-item">
                 <i class="far fa-folder-open has-text-grey"></i>&nbsp;
