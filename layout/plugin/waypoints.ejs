@@ -53,8 +53,9 @@ function throttle(fn,wait) {
   wait = wait === undefined ? 300 : wait;
   var timer = null;
   //以下函数当scroll事件触发时执行
-  return function (...args) {
+  return function () {
     var context = this;
+    var args = arguments;
     if (!timer){
       timer = setTimeout(function(){
           fn.apply(context, args);    

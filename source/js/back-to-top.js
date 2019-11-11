@@ -158,8 +158,9 @@ $(document).ready(function() {
 function debounce(fn,wait) {
     wait = wait === undefined ? 300 : wait;
     var timer = null;
-    return function(...args) {
+    return function() {
         var context = this;
+        var args = arguments;
         if(timer){
             clearTimeout(timer);
         }
